@@ -73,7 +73,12 @@ $classifier->learn('Symfony is the best', Type::POSITIVE);
 $classifier->learn('PhpStorm is great', Type::POSITIVE);
 $classifier->learn('Iltar complains a lot', Type::NEGATIVE);
 $classifier->learn('No Symfony is bad', Type::NEGATIVE);
-
+//$classifier->learn('Зомби очень это плохо', Type::NEGATIVE);
+//$classifier->learn('Ипотечное рабство убивает', Type::NEGATIVE);
+//$classifier->learn('Кофе по утрам это очень хорошо', Type::POSITIVE);
+//$classifier->learn('Котики спасут мир', Type::POSITIVE);
 
 var_dump($classifier->guess('Symfony is great')); // string(8) "positive"
 var_dump($classifier->guess('I complain a lot')); // string(8) "negative"
+//var_dump($classifier->guess('Зомби едят мозги')); // string(8) "positive"
+//var_dump($classifier->guess('Котики не пьют кофе с утра')); // string(8) "negative"
